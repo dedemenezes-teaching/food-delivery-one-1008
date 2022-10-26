@@ -7,7 +7,18 @@ class EmployeeRepository
   def initialize(csv_file_path)
     @csv_file_path = csv_file_path
     @employees = []
-    load_csv
+    load_csv if File.exist? @csv_file_path
+  end
+
+  def all_riders
+    @employees.select do |employee|
+      # comparison => true or false
+      employee.rider?
+    end
+  end
+
+  def find(id)
+    @employees.find { |employee| employee.id == id }
   end
 
   def find_by_username(username)

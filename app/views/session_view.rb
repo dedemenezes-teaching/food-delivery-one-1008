@@ -13,4 +13,10 @@ class SessionView
   def welcome(employee)
     puts "Welcome #{employee.username}"
   end
+
+  def display(riders)
+    riders.each_with_index do |employee, index|
+      puts "#{index + 1} - #{employee.username}"
+    end
+  end
 end

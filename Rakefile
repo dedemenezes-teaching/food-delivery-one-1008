@@ -20,7 +20,7 @@ task :int_customer do
   sh 'rspec -t customer || true'
 end
 
-task default: %i[rubocop spec]
+task default: %i[spec]
 
 task meal: %i[rubocop int_meal]
 

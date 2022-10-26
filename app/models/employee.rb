@@ -2,7 +2,7 @@
 
 class Employee
   attr_reader :password, :username, :role
-
+  attr_accessor :id
   # STATE
   # id => Integer
   # username #=> String
@@ -13,5 +13,13 @@ class Employee
     @username = attributes[:username]
     @password = attributes[:password]
     @role = attributes[:role]
+  end
+
+  def manager?
+    @role == 'manager'
+  end
+
+  def rider?
+    @role == 'rider'
   end
 end
