@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class BaseRepository
   def initialize(csv_file_path, the_klass)
     @csv_file_path = csv_file_path

@@ -1,4 +1,6 @@
-require_relative '../views/customer_view.rb'
+# frozen_string_literal: true
+
+require_relative '../views/customer_view'
 
 class CustomersController
   def initialize(customer_repository)

@@ -1,4 +1,6 @@
-require_relative '../views/meal_view.rb'
+# frozen_string_literal: true
+
+require_relative '../views/meal_view'
 
 class MealsController
   def initialize(meal_repository)

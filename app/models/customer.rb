@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Customer
   # id, a name and an address.
   attr_reader :name, :address
@@ -10,7 +12,7 @@ class Customer
   end
 
   def self.csv_header
-    [:id, :name, :address]
+    %i[id name address]
   end
 
   def to_csv

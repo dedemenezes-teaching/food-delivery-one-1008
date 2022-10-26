@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'csv'
 require_relative '../models/meal'
 require_relative 'base_repository'

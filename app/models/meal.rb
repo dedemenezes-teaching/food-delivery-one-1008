@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Meal
   attr_reader :name, :price
   attr_accessor :id
@@ -10,7 +12,7 @@ class Meal
   end
 
   def self.csv_header
-    [:id, :name, :price]
+    %i[id name price]
   end
 
   def to_csv
