@@ -37,7 +37,8 @@ class Router
     puts '2. List all meals'
     puts '3. Add a customer'
     puts '4. List all customers'
-    puts '5. Quit'
+    puts '5. Logout'
+    puts '6. Quit'
   end
 
   def route_manager_to_action(action)
@@ -51,6 +52,9 @@ class Router
     when '4'
       @customers_controller.list
     when '5'
+      @employee = nil
+    when '6'
+      @employee = nil
       @running = false
       puts 'Bye! See you zo/'
     else
